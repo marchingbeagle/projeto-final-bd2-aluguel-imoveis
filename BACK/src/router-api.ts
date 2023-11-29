@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify"
-import { RouterCity, RouterLocation, RouterPerson, RouterProperty, RouterState } from "./routers"
+import { RouterCategory, RouterCity, RouterLocation, RouterLog, RouterPerson, RouterProperty, RouterRental, RouterState } from "./routers"
 
 export default function router(
   router: FastifyInstance,
@@ -11,6 +11,9 @@ export default function router(
   router.register(RouterPerson, { prefix: "/person" })
   router.register(RouterProperty, { prefix: "/property" })
   router.register(RouterState, { prefix: "/state" })
+  router.register(RouterCategory, { prefix: "/category" })
+  router.register(RouterLog, { prefix: "/log" })
+  router.register(RouterRental, { prefix: "/rental" })
 
   done()
 }
