@@ -1,0 +1,16 @@
+.DS_Store
+/.idea
+/node_modules
+.production
+*.ofx
+.storage.json
+config.json
+mysql
+postgresql
+.env
+/.vscode
+/package-lock.json
+package-lock.json
+./package-lock.json
+./node_modules
+node_modules
