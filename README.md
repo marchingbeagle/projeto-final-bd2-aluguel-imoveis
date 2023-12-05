@@ -14,10 +14,19 @@ Utilizamos a ferramenta de modelagem de dados MySQL Workbench para criação do 
 arquivo fonte: [Modelo físico](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/SQL/modelofisico.mwb).
 
 
-![imagem atualizada](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/assets/110925995/026d9ae6-eac4-455e-90aa-32cf6ee5ead6)
+![Captura de tela 2023-12-05 122332](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/assets/110925995/c51d5ae4-6626-4909-8417-ffa38577fd46)
+
 
 ## Dicionário de dados
-As informações sobre as tabelas e índices foram documentados na planilha [template1.xlsx](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/template1.xlsx).
+As informações sobre as tabelas e índices foram documentados na planilha [template imovel](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/dicionario_dados_locadora_im%C3%B3vel.xlsx).
+
+## Scripts SQL
++ DDL [ddl.sql](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/SQL/comandos%20ddl.sql).
++ DML [dml.sql](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/SQL/comandos_dml.sql).
++ Triggers [triggers.sql](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/SQL/trigger.sql).
++ Stored procedures [storedprocedures.sql](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/SQL/sprocedure_imoveis_disponiveis.sql).
++ Consultas [consultas.sql](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/SQL/consultas_de_negocio.sql).
+
 
 
 ## CRUD
