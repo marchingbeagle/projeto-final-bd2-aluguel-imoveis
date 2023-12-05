@@ -40,3 +40,11 @@ SELECT
         categoria c ON l.categoria = c.idcategoria
     WHERE
         lo.imovel IS NULL;
+
+-- Distribuição dos valores de aluguel para cada categoria de imóvel.
+SELECT c.nome AS categoria, AVG(imovel.preco_aluguel) AS media_aluguel, MIN(imovel.preco_aluguel) AS menor_aluguel, MAX(imovel.preco_aluguel) AS maior_aluguel
+FROM mydb.imovel
+JOIN mydb.localizacao ON imovel.localizacao = localizacao.idlocalizacao
+JOIN mydb.categoria c ON localizacao.categoria = c.idcategoria
+WHERE imovel.preco_aluguel IS NOT NULL
+GROUP BY c.nome;
