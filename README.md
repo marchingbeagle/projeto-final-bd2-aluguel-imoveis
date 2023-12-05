@@ -18,3 +18,9 @@ arquivo fonte: [Modelo físico](https://github.com/marchingbeagle/projeto-final-
 
 ## Dicionário de dados
 As informações sobre as tabelas e índices foram documentados na planilha [template1.xlsx](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/template1.xlsx).
+
+
+## CRUD
+Criamos um servidor em typescript utilizando a biblioteca fastify para as chamadas http. 
+Para a manipulação dos dados do banco, aderimos a biblioteca typeORM, onde comunicamos o servidor com o banco de dados MySQL. 
+Por fim, para a demonstração do CRUD, criamos as rotas do servidor na plataforma Postman.
