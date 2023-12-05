@@ -11,10 +11,4 @@ export class StateEntity {
 
     @Column({ name: "sigla_estado", type: "varchar" })
     abbreviation: string
-
-    @CreateDateColumn({ name: "created_at", update: false })
-    createdAt: Date
-
-    @UpdateDateColumn({ name: "updated_at", update: true })
-    updatedAt: Date
 }

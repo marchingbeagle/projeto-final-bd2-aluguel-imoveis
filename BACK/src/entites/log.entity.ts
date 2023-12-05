@@ -12,9 +12,6 @@ export class LogEntity {
     @Column({ name: "descricao", type: "varchar" })
     description: string
 
-    @CreateDateColumn({ name: "created_at", update: false })
-    createdAt: Date
-
-    @UpdateDateColumn({ name: "updated_at", update: true })
-    updatedAt: Date
+    @CreateDateColumn({ name: "data", update: false })
+    date: Date
 }

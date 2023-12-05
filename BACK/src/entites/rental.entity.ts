@@ -23,10 +23,4 @@ export class RentalEntity {
 
     @Column({ name: "vigencia", type: "datetime" })
     validity: number
-
-    @CreateDateColumn({ name: "created_at", update: false })
-    createdAt: Date
-
-    @UpdateDateColumn({ name: "updated_at", update: true })
-    updatedAt: Date
 }

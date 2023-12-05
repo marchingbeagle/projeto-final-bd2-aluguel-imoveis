@@ -17,10 +17,4 @@ export class PropertyEntity {
 
     @Column({ name: "preco_aluguel", type: "integer" })
     rentalPrice: number
-
-    @CreateDateColumn({ name: "created_at", update: false })
-    createdAt: Date
-
-    @UpdateDateColumn({ name: "updated_at", update: true })
-    updatedAt: Date
 }

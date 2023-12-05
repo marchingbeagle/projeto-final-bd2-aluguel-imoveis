@@ -11,10 +11,4 @@ export class CityEntity {
 
     @Column({ name: "nome", type: "varchar" })
     name: string
-
-    @CreateDateColumn({ name: "created_at", update: false })
-    createdAt: Date
-
-    @UpdateDateColumn({ name: "updated_at", update: true })
-    updatedAt: Date
 }

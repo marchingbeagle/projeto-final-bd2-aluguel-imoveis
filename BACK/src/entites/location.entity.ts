@@ -23,10 +23,4 @@ export class LocationEntity {
 
     @Column({ name: "referencia", type: "varchar", nullable: true })
     reference: string
-
-    @CreateDateColumn({ name: "created_at", update: false })
-    createdAt: Date
-
-    @UpdateDateColumn({ name: "updated_at", update: true })
-    updatedAt: Date
 }

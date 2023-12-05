@@ -10,7 +10,7 @@ export const DB: DataSource = new DataSource({
   port: 3308,
   username: "root",
   password: "melina2000",
-  database: "Mysql",
+  database: "mydb",
   synchronize: false,
   migrationsRun: false,
   logging: true,

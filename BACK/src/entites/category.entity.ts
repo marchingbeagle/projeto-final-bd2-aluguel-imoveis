@@ -12,9 +12,9 @@ export class CategoryEntity {
     @Column({ name: "descricao", type: "varchar" })
     description: string
 
-    @CreateDateColumn({ name: "created_at", update: false })
+    @CreateDateColumn({ name: "data_criacao", update: false })
     createdAt: Date
 
-    @UpdateDateColumn({ name: "updated_at", update: true })
+    @UpdateDateColumn({ name: "data_atualizacao", update: true })
     updatedAt: Date
 }
