@@ -12,7 +12,6 @@ VALUES
 (9, 'Pernambuco', 'PE'),
 (10, 'Amazonas', 'AM');
 
-
 -- INSERT statements for mydb.cidade
 INSERT INTO mydb.cidade (idcidade, nome, estado)
 VALUES
@@ -57,22 +56,6 @@ VALUES
 (9, '98765432', '909', 'Cobertura Luxo', 'Próximo à praia', 9, 9),
 (10, '54321876', '1010', 'Edifício Diamante', 'Perto do hospital', 10, 10);
 
-
--- INSERT statements for mydb.log
-INSERT INTO mydb.log (idlog, titulo, descricao, data)
-VALUES
-(1, 'Aviso', 'Novo contrato assinado', '2023-01-03 00:00:00'),
-(2, 'Alerta', 'Pagamento atrasado', '2023-01-04 00:00:00'),
-(3, 'Notificação', 'Visita agendada', '2023-01-05 00:00:00'),
-(4, 'Aviso', 'Mudança de locatário', '2023-01-06 00:00:00'),
-(5, 'Alerta', 'Manutenção necessária', '2023-01-07 00:00:00'),
-(6, 'Notificação', 'Proposta recebida', '2023-01-08 00:00:00'),
-(7, 'Aviso', 'Reforma agendada', '2023-01-09 00:00:00'),
-(8, 'Alerta', 'Vistoria pendente', '2023-01-10 00:00:00'),
-(9, 'Notificação', 'Novo imóvel cadastrado', '2023-01-11 00:00:00'),
-(10, 'Aviso', 'Contrato renovado', '2023-01-12 00:00:00');
-
-
 -- INSERT statements for mydb.pessoas
 INSERT INTO mydb.pessoas (idpessoas, nome, cpf, data_nascimento, endereco, telefone, sexo)
 VALUES
@@ -86,7 +69,6 @@ VALUES
 (8, 'Camila Oliveira', '22211144455', '1998-03-15 00:00:00', 'Avenida H, 1819', '222111444', 'F'),
 (9, 'Gabriel Silva', '66655544433', '1987-07-05 00:00:00', 'Rua I, 2021', '666555444', 'M'),
 (10, 'Mariana Santos', '33322211100', '1994-01-10 00:00:00', 'Avenida J, 2223', '333222111', 'F');
-
 
 -- INSERT statements for mydb.imovel
 INSERT INTO mydb.imovel (idimovel, localizacao, proprietario, preco_compra, preco_aluguel)
