@@ -19,7 +19,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`log` (
   `idlog` INT NOT NULL,
   `titulo` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(45) NOT NULL,
+  `descricao` TEXT NOT NULL,
   `data` DATETIME NOT NULL,
   PRIMARY KEY (`idlog`))
 ENGINE = InnoDB;
