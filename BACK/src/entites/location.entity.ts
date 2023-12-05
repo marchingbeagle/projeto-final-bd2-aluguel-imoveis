@@ -18,10 +18,10 @@ export class LocationEntity {
     @Column({ name: "numero_imovel", type: "varchar" })
     number: string
 
-    @Column({ name: "complemento", type: "varchar" })
+    @Column({ name: "complemento", type: "varchar", nullable: true })
     complement: string
 
-    @Column({ name: "referencia", type: "varchar" })
+    @Column({ name: "referencia", type: "varchar", nullable: true })
     reference: string
 
     @CreateDateColumn({ name: "created_at", update: false })

@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { CategoryEntity } from "../entites"
 import { CategoryRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class CategoryService {
   private categoryRepository: typeof CategoryRepository
@@ -33,16 +34,13 @@ export class CategoryService {
     return await paginate(this.categoryRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let category = await this.find(body.id)
 
     if (!category) category = new CategoryEntity()
 
-    Object.assign(category, body)
+    Object.assign(category, _.omit(body, ["id"]))
 
     return await this.categoryRepository.save(category)
   }

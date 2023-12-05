@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { CityEntity } from "../entites"
 import { CityRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class CityService {
   private cityRepository: typeof CityRepository
@@ -33,16 +34,13 @@ export class CityService {
     return await paginate(this.cityRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let city = await this.find(body.id)
 
     if (!city) city = new CityEntity()
 
-    Object.assign(city, body)
+    Object.assign(city, _.omit(body, ["id"]))
 
     return await this.cityRepository.save(city)
   }

@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { StateEntity } from "../entites"
 import { StateRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class StateService {
   private stateRepository: typeof StateRepository
@@ -33,16 +34,13 @@ export class StateService {
     return await paginate(this.stateRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let state = await this.find(body.id)
 
     if (!state) state = new StateEntity()
 
-    Object.assign(state, body)
+    Object.assign(state, _.omit(body, ["id"]))
 
     return await this.stateRepository.save(state)
   }

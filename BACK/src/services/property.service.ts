@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { PropertyEntity } from "../entites"
 import { PropertyRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class PropertyService {
   private propertyRepository: typeof PropertyRepository
@@ -33,16 +34,13 @@ export class PropertyService {
     return await paginate(this.propertyRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let property = await this.find(body.id)
 
     if (!property) property = new PropertyEntity()
 
-    Object.assign(property, body)
+    Object.assign(property, _.omit(body, ["id"]))
 
     return await this.propertyRepository.save(property)
   }

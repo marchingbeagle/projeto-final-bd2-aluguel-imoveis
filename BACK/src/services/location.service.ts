@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { LocationEntity } from "../entites"
 import { LocationRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class LocationService {
   private locationRepository: typeof LocationRepository
@@ -33,16 +34,13 @@ export class LocationService {
     return await paginate(this.locationRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let location = await this.find(body.id)
 
     if (!location) location = new LocationEntity()
 
-    Object.assign(location, body)
+    Object.assign(location, _.omit(body, ["id"]))
 
     return await this.locationRepository.save(location)
   }
