@@ -33,3 +33,5 @@ As informações sobre as tabelas e índices foram documentados na planilha [tem
 Criamos um servidor em typescript utilizando a biblioteca fastify para as chamadas http. 
 Para a manipulação dos dados do banco, aderimos a biblioteca typeORM, onde comunicamos o servidor com o banco de dados MySQL. 
 Por fim, para a demonstração do CRUD, criamos as rotas do servidor na plataforma Postman.
+
+Código fonte disponível em: [CRUD](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/tree/main/BACK)
