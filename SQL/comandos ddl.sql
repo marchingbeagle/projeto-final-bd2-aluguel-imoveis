@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pessoas` (
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`log` (
-  `idlog` INT NOT NULL,
+  `idlog` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(45) NOT NULL,
   `descricao` TEXT NOT NULL,
   `data` DATETIME NOT NULL,
