@@ -6,6 +6,9 @@ export class RentalEntity {
     @PrimaryColumn({ name: "idlocacao", type: "integer" })
     id: number
 
+    @Column({ name: "imovel", type: "integer" })
+    idProperty: number
+
     @Column({ name: "inquilino", type: "integer" })
     idTenant: number
 

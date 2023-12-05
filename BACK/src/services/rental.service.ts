@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { RentalEntity } from "../entites"
 import { RentalRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class RentalService {
   private rentalRepository: typeof RentalRepository
@@ -33,16 +34,13 @@ export class RentalService {
     return await paginate(this.rentalRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let rental = await this.find(body.id)
 
     if (!rental) rental = new RentalEntity()
 
-    Object.assign(rental, body)
+    Object.assign(rental, _.omit(body, ["id"]))
 
     return await this.rentalRepository.save(rental)
   }

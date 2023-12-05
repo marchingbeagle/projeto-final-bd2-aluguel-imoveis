@@ -2,6 +2,7 @@ import { paginate } from "../tools"
 import { LogEntity } from "../entites"
 import { LogRepository } from "../repositories"
 import Joi from "joi"
+import _ from "lodash"
 
 export class LogService {
   private logRepository: typeof LogRepository
@@ -33,16 +34,13 @@ export class LogService {
     return await paginate(this.logRepository, params)
   }
 
-  async save(data: any) {
-    const body = await Joi.object({
-
-    }).validateAsync(data)
+  async save(body: any) {
 
     let log = await this.find(body.id)
 
     if (!log) log = new LogEntity()
 
-    Object.assign(log, body)
+    Object.assign(log, _.omit(body, ["id"]))
 
     return await this.logRepository.save(log)
   }
