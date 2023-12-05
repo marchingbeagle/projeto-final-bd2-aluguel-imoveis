@@ -35,3 +35,6 @@ Para a manipulação dos dados do banco, aderimos a biblioteca typeORM, onde com
 Por fim, para a demonstração do CRUD, criamos as rotas do servidor na plataforma Postman.
 
 Código fonte disponível em: [CRUD](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/tree/main/BACK)
+
+## Relatório Final
+O relatório final está disponível no arquivo: [Relatório](https://github.com/marchingbeagle/projeto-final-bd2-aluguel-imoveis/blob/main/template1_completo.pdf)
